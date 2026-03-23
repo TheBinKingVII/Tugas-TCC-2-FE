@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <span class="badge">Notes App</span>
+        <h1>Kelola Catatanmu Lebih Rapi</h1>
+        <p class="subtitle">Express + MySQL (Sequelize) - CRUD Catatan</p>
+      </header>
+
+      <section class="card card-form">
+        <h2 id="formTitle">Tambah Catatan</h2>
+
+        <form id="noteForm" class="form">
+          <input type="hidden" id="noteId" />
+
+          <label for="judul">Judul</label>
+          <input
+            id="judul"
+            name="judul"
+            type="text"
+            placeholder="Masukkan judul..."
+            required
+            maxlength="255"
+          />
+
+          <label for="isi">Isi</label>
+          <textarea
+            id="isi"
+            name="isi"
+            placeholder="Tulis isi catatan..."
+            rows="8"
+            required
+          ></textarea>
+
+          <div class="formActions">
+            <button id="submitBtn" type="submit">Simpan</button>
+            <button id="cancelBtn" type="button" class="secondary" hidden>
+              Batal
+            </button>
+          </div>
+        </form>
+
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="card">
+        <div class="listHeader">
+          <h2>Daftar Catatan</h2>
+          <button id="refreshBtn" class="secondary" type="button">
+            Muat Ulang
+          </button>
+        </div>
+
+        <div id="notesList" class="notesList"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
