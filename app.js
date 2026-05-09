@@ -1,4 +1,4 @@
-const API_BASE = "/api/notes";
+const API_BASE = "https://be-rest-729492539702.us-central1.run.app/api/notes";
 
 const noteForm = document.getElementById("noteForm");
 const noteIdEl = document.getElementById("noteId");
